@@ -55,7 +55,7 @@ the INSTALL document. Licensing is discussed in the LICENSE document.
 
 %build
 cd cpan
-%{__perl} cpan/Build.PL installdirs=vendor optimize="$RPM_OPT_FLAGS"
+%{__perl} Build.PL installdirs=vendor optimize="$RPM_OPT_FLAGS"
 
 %install
 cd cpan
