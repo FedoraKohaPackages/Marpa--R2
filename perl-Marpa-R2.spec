@@ -54,8 +54,8 @@ the INSTALL document. Licensing is discussed in the LICENSE document.
 %setup -q -n Marpa-R2-%{version}
 
 %build
-%{__perl} Build.PL installdirs=vendor optimize="$RPM_OPT_FLAGS"
-./Build
+make install 
+#%{__perl} cpan/Build.PL installdirs=vendor optimize="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
