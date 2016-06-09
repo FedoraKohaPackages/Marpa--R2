@@ -2,7 +2,7 @@ Name:           perl-Marpa-R2
 Version:        3.000000
 Release:        3%{?dist}
 Summary:        Marpa::R2 Perl module
-License:        OSI-Approved, see COPYING.LESSER LICENSE
+License:        GPL3+
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Marpa-R2/
 Source0:        http://www.cpan.org/authors/id/J/JK/JKEGL/Marpa-R2-%{version}.tar.gz
