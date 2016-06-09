@@ -63,12 +63,14 @@ the INSTALL document. Licensing is discussed in the LICENSE document.
 %setup -q -n Marpa-R2-%{version}
 
 %build
+cd cpan
 %{__perl} Build.PL installdirs=vendor optimize="$RPM_OPT_FLAGS"
 ./Build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
+cd cpan
 ./Build install destdir=$RPM_BUILD_ROOT create_packlist=0
 find $RPM_BUILD_ROOT -type f -name '*.bs' -size 0 -exec rm -f {} \;
 find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
@@ -76,6 +78,7 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
 %{_fixperms} $RPM_BUILD_ROOT/*
 
 %check
+cd cpan
 ./Build test
 
 %clean
